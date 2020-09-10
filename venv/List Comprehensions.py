@@ -1,11 +1,11 @@
 
 # Normal måde
-f = open('test.txt', 'r')
+f = open('test2.txt', 'r')
 print(f.read())
 f.close()
 
 # Med comprehension
-with open('test.txt', 'r') as f:
+with open('test2.txt', 'r') as f:
     print(f.read())
 
 # Normal
