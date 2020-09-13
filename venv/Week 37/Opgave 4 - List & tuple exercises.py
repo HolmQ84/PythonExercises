@@ -9,7 +9,7 @@ def front_x(words):
     return sorted([i for i in words if i[0] =='x'])+sorted([i for i in words if not i[0] == 'x'])
 
 def sort_last(tuples):
-    return sorted([i for i in tuples])
+    return sorted([i for i in tuples], key=lambda x:x[-1])
 
 def test(got, expected):
     if got == expected:
@@ -20,6 +20,7 @@ def test(got, expected):
 
 def main():
     print('match_ends')
+
     test(match_ends(['aba', 'xyz', 'aa', 'x', 'bbb']), 3)
     test(match_ends(['', 'x', 'xy', 'xyx', 'xx']), 2)
     test(match_ends(['aaa', 'be', 'abc', 'hello']), 1)
