@@ -8,5 +8,4 @@ def check_syntax(x):
     elif '-it' in x:
         print("Thats cool!")
 
-
 check_syntax(sys.argv)
