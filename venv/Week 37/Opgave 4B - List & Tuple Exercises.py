@@ -15,7 +15,8 @@ def remove_adjacent(nums):
 # pass of both lists.
 
 def linear_merge(list1, list2):
-    return sorted([i for i in list1]+[j for j in list2])
+    # return sorted([i for i in list1]+[j for j in list2])
+    return sorted((i+j) for (i,j) in (list1+list2))
 
 # Note: the solution above is kind of cute, but unforunately list.pop(0)
 # is not constant time with the standard python list implementation, so
