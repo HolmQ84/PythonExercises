@@ -20,23 +20,22 @@ if not os.path.exists(name):
 # 2. Create a file in that folder called 'exercise.py'
 
 os.chdir(path)
-
-f = open('exercise1.py', 'w')
+open('exercise1.py', 'w')
 
 # 3.
 
-f.write(input('Write something:\n=> '))
-f.close()
+text = input('Write something:\n=> ')
+with open('exercise1.py', 'w') as f:
+    f.write(text)
 
 # 4.
 
-g = open('exercise2.py', 'w')
-g.write(input('Write something:\n=> '))
-g.close()
+text = input('Write something:\n=> ')
+with open('exercise2.py', 'w') as f:
+    f.write(text)
 
 # 5.
 
-f = open('exercise1.py', 'r')
-g = open('exercise2.py', 'r')
-print(f.read())
-print(g.read())
+with open('exercise1.py', 'r') as f:
+    with open('exercise2.py', 'r') as g:
+        print(f.read()+g.read())
