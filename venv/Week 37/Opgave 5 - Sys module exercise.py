@@ -6,12 +6,12 @@
 
 import sys
 
-def message(x):
-    if len(x) > 0:
-        print(x[1])
-
-    if len(x) > 1:
-        print(x[1])
-        print(x[2])
+def check_syntax(x):
+    if '-it' in x and '-rm' in x:
+        print('Cool story bro!')
+    elif "-it" not in x:
+        print('not okay!')
+    elif '-it' in x:
+        print("Thats cool!")
 
 message(sys.argv)

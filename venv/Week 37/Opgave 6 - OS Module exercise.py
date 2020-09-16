@@ -7,3 +7,36 @@
 # 4. repeat step 2 and 3 (name the file something else).
 # 5. read the content of the files and and print it to the console.
 
+import os
+
+# 1. Create a folder 'os_exercises'
+directory = 'C:/Users/marti/PycharmProjects/PythonExercises/venv/Week 37/'
+name = 'os_exercises'
+path = directory+name
+
+if not os.path.exists(name):
+    os.mkdir(path)
+
+# 2. Create a file in that folder called 'exercise.py'
+
+os.chdir(path)
+
+f = open('exercise1.py', 'w')
+
+# 3.
+
+f.write(input('Write something:\n=> '))
+f.close()
+
+# 4.
+
+g = open('exercise2.py', 'w')
+g.write(input('Write something:\n=> '))
+g.close()
+
+# 5.
+
+f = open('exercise1.py', 'r')
+g = open('exercise2.py', 'r')
+print(f.read())
+print(g.read())
